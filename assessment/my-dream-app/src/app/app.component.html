@@ -1,0 +1,24 @@
+<p>This is app.component.html</p>
+<app-county></app-county>
+<hr>
+<h1>Welcome to my first Angular app</h1>
+<root-directives></root-directives>
+<hr>
+<button [disabled]="buttonDisable">Click Me</button>
+<hr>
+<button (click)="onSave()">Press</button>
+<hr>
+<h4>Name = {{ name2 }}</h4>
+Enter Name: <input type="text" [(ngModel)]="name2">
+<hr>
+Counter = {{counter}} <button (click)="countClick()">Click Count</button>
+<hr>
+<h4>Names List</h4>
+<ul>
+    <li *ngFor="let nameListINSIDE of  namesList">{{nameListINSIDE}}</li>
+</ul>
+<hr>
+<h1>Email service</h1>
+<app-name-email></app-name-email>
+<hr>
+<app-id-email></app-id-email>

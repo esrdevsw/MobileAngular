@@ -1,0 +1,23 @@
+<p>obs01 works!</p>
+<h3>{{title01}}</h3>
+<h3>{{updated}}</h3>
+
+<ol>
+    <li *ngFor="let hobby of h">{{hobby.name}}, {{hobby.hobby}}</li>
+</ol>
+
+
+<table border>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>hobby</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let hobby of h">
+            <td>{{hobby.name}}</td>
+            <td>{{hobby.hobby}}</td>
+        </tr>
+    </tbody>
+</table>

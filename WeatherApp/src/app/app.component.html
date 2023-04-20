@@ -1,3 +1,9 @@
+  <div class="search">
+    <form #form="ngForm" (submit)="onSubmit()">
+      <input type="text" placeholder="search city" name="city" [(ngModel)]="cityName">
+    </form>
+  </div>
+
 <div class="container" *ngIf="weatherData">
   <div class="upper-data">
     <img src="../assets/hotSum.jpg" *ngIf="weatherData.location.currentConditions.temp  > 15">
@@ -23,7 +29,7 @@
           <span>Min</span>
         </div>
         <div class="info-block-value">
-          10°C
+          {{ weatherData.location.values[0].mint | number: '1.0-2' }} °C
         </div>
       </div>
 
@@ -34,7 +40,7 @@
           <span>Max</span>
         </div>
         <div class="info-block-value">
-          40°C
+          {{ weatherData.location.values[0].maxt | number: '1.0-2' }} °C
         </div>
       </div>
 
@@ -45,7 +51,8 @@
           <span>Humidity</span>
         </div>
         <div class="info-block-value">
-          65%
+          {{ weatherData.location.currentConditions.humidity | number: '1.0-2' }}
+          %
         </div>
       </div>
 
@@ -56,7 +63,7 @@
           <span>Wind</span>
         </div>
         <div class="info-block-value">
-          12 km/h
+          {{ weatherData.location.currentConditions.wspd | number: '1.0-2' }} km/h
         </div>
 
       </div>

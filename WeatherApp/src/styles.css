@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --midnight-blue: #03045eff;
+    --midnight-blue: rgb(212, 212, 212);
     --star-command-blue: #0077b6ff;
     --pacific-blue: #00b4d8ff;
     --middle-blue: #90e0efff;
@@ -137,4 +137,18 @@ body {
     justify-content: flex-start;
     align-items: center;
     color: var(--white);
+}
+
+.search{
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.search input {
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1em;
+    font-size: 0.8em;
+    text-align: center;
 }
